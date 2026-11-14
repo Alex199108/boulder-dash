@@ -1,5 +1,6 @@
 class Mapp {
   constructor() {
+    /*
     this.elements = [
       ["S", "S", "E", "E", "E", "E", "E", "E"],
       ["S", "E", "E", "E", "E", "E", "E", "E"],
@@ -16,6 +17,7 @@ class Mapp {
       ["E", "E", "E", "E", "E", "E", "E", "E"],
       ["E", "E", "E", "E", "E", "E", "E", "E"],
     ];
+    */
 
     this.spriteMap = {
       wall: { x: 3, y: 6 },
@@ -26,6 +28,7 @@ class Mapp {
     };
     this.rows = 15;
     this.cols = 20;
+    this.fillGround();
     this.tileSize = 32;
     this.spriteSize = 32;
     this.canvas = document.createElement("canvas");
@@ -35,6 +38,17 @@ class Mapp {
     this.ctx = this.canvas.getContext("2d");
     this.image = document.createElement("img");
     this.image.src = "img/sprites.png";
+  }
+
+  fillGround() {
+    this.elements = [];
+    for (let y = 0; y < this.rows; y++) {
+      let row = [];
+      for (let x = 0; x < this.cols; x++) {
+        row.push("G");
+      }
+      this.elements.push(row);
+    }
   }
 
   draw() {
@@ -82,6 +96,7 @@ class Mapp {
 }
 
 const mapp = new Mapp();
+//mapp.fillGround();
 console.log(mapp.elements);
 mapp.draw();
 mapp.image.onload = () => {
