@@ -29,6 +29,7 @@ class Mapp {
     this.rows = 15;
     this.cols = 20;
     this.fillGround();
+    this.addBorder();
     this.tileSize = 32;
     this.spriteSize = 32;
     this.canvas = document.createElement("canvas");
@@ -48,6 +49,16 @@ class Mapp {
         row.push("G");
       }
       this.elements.push(row);
+    }
+  }
+
+  addBorder() {
+    for (let y = 0; y < this.rows; y++) {
+      for (let x = 0; x < this.cols; x++) {
+        if (y === 0 || y === this.rows - 1 || x === 0 || x === this.cols - 1) {
+          this.elements[y][x] = "W";
+        }
+      }
     }
   }
 
