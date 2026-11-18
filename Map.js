@@ -30,6 +30,8 @@ class Mapp {
     this.cols = 20;
     this.fillGround();
     this.addBorder();
+    this.player = new Player(1, 1);
+    this.elements[this.player.y][this.player.x] = "P";
     this.tileSize = 32;
     this.spriteSize = 32;
     this.canvas = document.createElement("canvas");
