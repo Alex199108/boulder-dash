@@ -109,9 +109,18 @@ class Mapp {
 }
 
 const mapp = new Mapp();
+const input = new InputHandler();
 //mapp.fillGround();
 console.log(mapp.elements);
 mapp.draw();
 mapp.image.onload = () => {
   mapp.draw();
 };
+// Game Loop: alle 150 ms ein Tick
+setInterval(() => {
+  const direction = input.getDirection();
+  if (direction) {
+    mapp.player.move(direction, mapp);
+  }
+  mapp.draw();
+}, 150);
