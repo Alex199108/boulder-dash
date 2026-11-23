@@ -1,23 +1,23 @@
 class Mapp {
   constructor() {
-    /*
+    //prettier-ignore
     this.elements = [
-      ["S", "S", "E", "E", "E", "E", "E", "E"],
-      ["S", "E", "E", "E", "E", "E", "E", "E"],
-      ["S", "E", "P", "E", "E", "E", "E", "E"],
-      ["E", "E", "E", "G", "E", "E", "G", "E"],
-      ["E", "E", "E", "S", "S", "E", "E", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
-      ["W", "W", "W", "W", "W", "W", "W", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
-      ["E", "E", "E", "G", "D", "E", "E", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
-      ["E", "E", "E", "E", "E", "E", "E", "E"],
+      ["W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W"],
+      ["W", "E", "G", "G", "G", "G", "G", "G", "S", "G", "G", "G", "G", "G", "G", "G", "S", "G", "G", "W"],
+      ["W", "G", "G", "D", "G", "G", "G", "G", "G", "G", "G", "G", "D", "G", "G", "G", "G", "G", "G", "W"],
+      ["W", "G", "G", "G", "G", "S", "G", "G", "G", "G", "G", "G", "G", "G", "G", "S", "G", "G", "G", "W"],
+      ["W", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "W"],
+      ["W", "G", "W", "W", "W", "W", "W", "G", "G", "G", "G", "G", "G", "G", "W", "W", "W", "W", "G", "W"],
+      ["W", "G", "G", "G", "G", "G", "G", "G", "G", "D", "G", "G", "G", "G", "G", "G", "G", "G", "G", "W"],
+      ["W", "G", "G", "S", "G", "G", "G", "G", "E", "E", "E", "G", "G", "G", "G", "G", "S", "G", "G", "W"],
+      ["W", "G", "G", "G", "G", "G", "G", "G", "E", "D", "E", "G", "G", "G", "G", "G", "G", "G", "G", "W"],
+      ["W", "G", "D", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "D", "G", "W"],
+      ["W", "G", "G", "G", "G", "W", "W", "W", "W", "G", "G", "W", "W", "W", "W", "G", "G", "G", "G", "W"],
+      ["W", "G", "G", "G", "S", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "S", "G", "G", "W"],
+      ["W", "G", "G", "G", "G", "G", "G", "D", "G", "G", "G", "G", "D", "G", "G", "G", "G", "G", "G", "W"],
+      ["W", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "G", "D", "W"],
+      ["W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W"],
     ];
-    */
 
     this.spriteMap = {
       wall: { x: 3, y: 6 },
@@ -28,8 +28,8 @@ class Mapp {
     };
     this.rows = 15;
     this.cols = 20;
-    this.fillGround();
-    this.addBorder();
+    //this.fillGround();
+    //this.addBorder();
     this.player = new Player(1, 1);
     this.elements[this.player.y][this.player.x] = "P";
     this.tileSize = 32;
