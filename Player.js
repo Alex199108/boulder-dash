@@ -25,6 +25,10 @@ class Player {
     if (nextTile === "W" || nextTile === "S") {
       return;
     }
+    if(nextTile === "D"){
+      this.diamonds++;
+      console.log(this.diamonds);
+    }
     world.elements[newY][newX] = "P";
     world.elements[this.y][this.x] = "E";
     this.x = newX;
