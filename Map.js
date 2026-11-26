@@ -19,6 +19,11 @@ class Mapp {
       ["W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W"],
     ];
 
+    this.totalDiamonds = this.countDiamonds();
+    this.levelDone = false;
+
+
+
     this.spriteMap = {
       wall: { x: 3, y: 6 },
       player: { x: 0, y: 0 },
@@ -62,6 +67,18 @@ class Mapp {
         }
       }
     }
+  }
+
+  countDiamonds(){
+    let count = 0;
+    this.elements.forEach((row)=>{
+      row.forEach((letter)=>{
+        if(letter === "D"){
+        count +=1;
+        }
+      })
+    })
+    return count;
   }
 
   draw() {
@@ -121,6 +138,10 @@ setInterval(() => {
   const direction = input.getDirection();
   if (direction) {
     mapp.player.move(direction, mapp);
+  }
+  if(mapp.player.diamonds >= mapp.totalDiamonds && !mapp.levelDone){
+    console.log("Level geschafft");
+    mapp.levelDone = true;
   }
   mapp.draw();
 }, 150);
